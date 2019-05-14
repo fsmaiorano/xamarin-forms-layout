@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LayoutXF.Layouts.RelativeLayout.RelativePage">
-     <ContentPage.Title>
+    <ContentPage.Title>
         RelativeLayout
     </ContentPage.Title>
     <ContentPage.Content>
+        <RelativeLayout>
+            <BoxView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=100 }" BackgroundColor="Blue" />
+            <BoxView BackgroundColor="Red" x:Name="RedBoxView" Margin="200" WidthRequest="100" HeightRequest="100" />
+            <BoxView BackgroundColor="Green" 
+                     WidthRequest="100"
+                     HeightRequest="100"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RedBoxView ,Property=Y, Factor=1, Constant=20 }" 
+                     RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToView, ElementName=RedBoxView, Property=X, Factor=1, Constant=20 }" />
+        </RelativeLayout>
     </ContentPage.Content>
 </ContentPage>
