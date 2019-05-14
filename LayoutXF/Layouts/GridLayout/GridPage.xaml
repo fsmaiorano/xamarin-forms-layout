@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="LayoutXF.Layouts.GridLayout.GridPage">
+    <ContentPage.Title>
+        GridLayout
+    </ContentPage.Title>
+    <ContentPage.Content>
+        <Grid>
+            <!-- Quantity of columns -->
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150" />
+                <!-- Column -->
+                <ColumnDefinition Width="Auto" />
+                <!-- Column -->
+                <ColumnDefinition Width="*" />
+                <!-- Column -->
+            </Grid.ColumnDefinitions>
+            <!-- Quantity of lines -->
+            <Grid.RowDefinitions>
+                <RowDefinition Height="100" />
+                <!-- Line -->
+                <RowDefinition Height="100" />
+                <!-- Line -->
+                <RowDefinition Height="100" />
+                <!-- Line -->
+                  <RowDefinition Height="100" />
+                <!-- Line -->
+            </Grid.RowDefinitions>
+            <BoxView Grid.Column="0" Grid.Row="0" BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Column="2" Grid.Row="0" BackgroundColor="Blue" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="1" BackgroundColor="Yellow" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <BoxView Grid.Column="0" Grid.Row="2" Grid.RowSpan="2 " BackgroundColor="Red" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

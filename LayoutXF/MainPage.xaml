@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:local="clr-namespace:LayoutXF" x:Class="LayoutXF.MainPage">
+    <StackLayout>
+        <Button Text="StackLayout" Clicked="GoToStackLayout" />
+        <Button Text="GridLayout" Clicked="GoToGridLayout" />
+        <Button Text="AbsoluteLayout" Clicked="GoToAbsoluteLayout" />
+        <Button Text="RelativeLayout" Clicked="GoToRelativeLayout" />
+        <Button Text="ScrollLayout" Clicked="GoToScrollLayout" />
+    </StackLayout>
+</ContentPage>
